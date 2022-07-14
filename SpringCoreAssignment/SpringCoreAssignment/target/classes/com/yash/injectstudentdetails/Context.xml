@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean class="java.lang.String" id="Mani">
+		<constructor-arg value="Manish"></constructor-arg>
+	</bean>
+	<bean class="java.lang.Double" id="120">
+		<constructor-arg value="120"></constructor-arg>
+	</bean>
+	<bean class="java.lang.String" id="Ram">
+		<constructor-arg value="Ram"></constructor-arg>
+	</bean>
+	<bean class="java.lang.Double" id="240">
+		<constructor-arg value="240"></constructor-arg>
+	</bean>
+	<bean class="java.lang.String" id="Raj">
+		<constructor-arg value="Raj"></constructor-arg>
+	</bean>
+	<bean class="java.lang.Double" id="400">
+		<constructor-arg value="400"></constructor-arg>
+	</bean>
+
+	<bean class="com.yash.injectstudentdetails.StudentDetails"
+		id="studentDetails">
+
+		<property name="students">
+			<map>
+				<entry key-ref="mani" value-ref="120"></entry>
+				<entry key-ref="Ram" value-ref="240"></entry>
+				<entry key-ref="Raj" value-ref="400"></entry>
+			</map>
+		</property>
+	</bean>
+
+</beans>
